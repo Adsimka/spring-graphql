@@ -26,6 +26,6 @@ public class Author {
     private Integer age;
 
     @Builder.Default
-    @OneToMany(mappedBy = "author", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "author", cascade = CascadeType.ALL, fetch = FetchType.EAGER  )
     private List<Book> books = new ArrayList<>();
 }
